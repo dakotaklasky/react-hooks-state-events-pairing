@@ -1,7 +1,10 @@
 import video from "../data/video.js";
+import Header from "./Header"
+import Votes from "./Votes"
+import Comments from "./Comments"
+
 
 function App() {
-  console.log("Here's your data:", video);
 
   return (
     <div className="App">
@@ -13,6 +16,9 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Header data={video}/>
+      <Votes data={video} />
+      <Comments data={video} />
     </div>
   );
 }
